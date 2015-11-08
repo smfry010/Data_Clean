@@ -1,5 +1,5 @@
-capstone <- function () {
-    setwd("c:/users/smfry_000/desktop/coursera/r/3_data_cleaning/capstone")
+run_analysis <- function () {
+    #setwd("c:/users/smfry_000/desktop/coursera/r/3_data_cleaning/capstone/Dataset")
     library(data.table)
     
     ## read files and create column for filename
@@ -47,9 +47,10 @@ capstone <- function () {
     
     ## Means of values
     tidy_file <- dt_both2[,lapply(.SD,mean),by=description]
+    print(tidy_file)
     
-    prevwd <- getwd()
-    setwd("c:/users/smfry_000/desktop/coursera/r/3_data_cleaning/capstone")
+    #prevwd <- getwd()
+    #setwd("c:/users/smfry_000/desktop/coursera/r/3_data_cleaning/capstone")
     write.table(tidy_file, file = "tidy_file.txt", row.names = FALSE, sep = ",")
-    setwd(prevwd)
+    #setwd(prevwd)
 }
