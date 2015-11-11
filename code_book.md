@@ -1,10 +1,7 @@
 ---
-title: "Codebook template"
+title: "Codebook for Final Project"
 author: Michael Fry
 date: 11/11/2015
-output:
-  html_document:
-    keep_md: yes
 ---
 
 ## Project Description
